@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Libre+Baskerville&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <title>Marina Estetica</title>
+
+    <style>
+        .footer {
+      width: 100%;
+      background-color: #ffffff;
+      color: #000000;
+      padding-top: 20px;
+    }
+    .footer a {
+      color: #000000;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      color: #007bff;
+    }
+      
+      </style>
+</head>
+<body style="background: #DDC5C5;">
+
+      
+      </style>
+
+</head>
+<body style="background: #DDC5C5;">
+    <!--inizio navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="home.html"><img src="img/logo.jpg" width="100" alt="logo"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <!-- Servizi con menu a tendina -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarServizi" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Servizi
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarServizi">
+                  <li><a class="dropdown-item" href="#laser">Laser</a></li>
+                  <li><a class="dropdown-item" href="#ceretta">Cera</a></li>
+                  <li><a class="dropdown-item" href="#massaggi">Massaggi</a></li>
+                  <li><a class="dropdown-item" href="#trucco">Trucco</a></li>
+                  <li><a class="dropdown-item" href="#manicure">Mani e Piedi</a></li>
+                  <li><a class="dropdown-item" href="#pressoterapia">Pressoterapia</a></li>
+                  <li><a class="dropdown-item" href="#radiofrequenza">Radiofrequenza</a></li>
+
+
+                </ul>
+              </li>
+              <!-- Contatti -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarcontatti" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contatti</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarcontatti">
+                  <li><a class="dropdown-item" href="contatti.html">Chi Sono</a></li>
+                </ul>
+              </li>
+              <!-- Altri link -->
+              <li class="nav-item">
+                <a class="nav-link" href="Consulenza.html">Consulenza</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+<!-- Tasto chiamami -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#prenotazioneModal">
+    Chiamami
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="prenotazioneModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Vorresti Essere Contattata?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <!-- Form per le prenotazioni -->
+            <form id="contactForm">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="nome" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="nome" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="numero" class="form-label">Numero di telefono</label>
+                        <input type="tel" class="form-control" id="numero" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="messaggio" class="form-label">Messaggio</label>
+                        <textarea class="form-control" id="messaggio" required></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+                    <button type="button" class="btn btn-primary" onclick="sendWhatsAppMessage()">Chiamami!</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>       <!--fine tasto bottone-->
+   </nav>
+   <br><br>
+
+   <!--servizi laser-->
+   <div id="laser" class="container my-5 text-center "style="max-width: 580px;">
+    <img src="img/laser.jpg" class="card-img-top img-responsive" style="border-radius: 20px;" alt="laser">
+    <div class="card-body">
+        <h1 class="card-title  style=font-family: 'Libre Baskerville', serif', serif;color: white;">Trattamento Laser al Diodo 808 </h1>
+        <br><br>
+        <h3 style="font-family: 'Libre Baskerville', serif;color: white;">Donna</h3>
+        <h2><span class="badge text-bg-secondary" style="font-family: 'Libre Baskerville', serif;color: white;">total body 70 €</span></h2>  
+      </div>
+  </div>
+<!-- card donna-->
+  <div class="container">
+    <div class="row">
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Gambe-cosce</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">40 €</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Mezza Gamba</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">25 €</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Cosce</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">25 €</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Inguine</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">25 €</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Braccia</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">20 €</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Viso</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">20 €</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Baffi</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">10 €</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Ascelle</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">15  €</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Schiena</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">20 €</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Pancia</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">15 €</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fine card donna-->
+
+
+<!--sezione uomo laser-->
+  <div class="container my-5 text-center "style="max-width: 580px;">
+        <br><br>
+        <h3 style="font-family: 'Libre Baskerville', serif;color: white;">Uomo</h3>
+        <h2><span class="badge text-bg-secondary" style="font-family: 'Libre Baskerville', serif;color: white;">total body 80 €</span></h2>  
+      </div>
+
+      <!-- card uomo-->
+  <div class="container">
+    <div class="row">
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Schiena</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">20 €</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Gambe-Cosce</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">45 €</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Ascelle</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">15 €</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Braccia</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">20 €</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Glutei</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">15 €</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Petto-Addome-Schiena-Braccia-Ascelle</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">60 €</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Zigomi</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">5 €</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Petto - Addome</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">30 €</h4>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+  </div>
+  <!-- fine card uomo-->
+
+     <!--servizi ceretta-->
+     <div id="ceretta" class="container my-5 text-center "style="max-width: 580px;">
+        <img src="img/ceretta.jpg" class="card-img-top img-responsive" style="border-radius: 20px;" alt="laser">
+        <div class="card-body">
+            <h1 class="card-title  style=font-family: 'Libre Baskerville', serif', serif;color: white;">Depilazione Cera </h1>
+            <br><br>
+            <h3 style="font-family: 'Libre Baskerville', serif;color: white;">Donna</h3>
+            <h2><span class="badge text-bg-secondary" style="font-family: 'Libre Baskerville', serif;color: white;">Cera Total body 30 €</span></h2>  
+          </div>
+      </div>
+
+
+
+  <!-- card donna   ceretta-->
+<div class="container">
+<div class="row">
+  <div class="col-6 col-md-3 mb-4">
+    <div class="card text-center p-3">
+      <div class="card-body">
+        <h5 class="card-title">Schiena</h5>
+        <h4 style="font-family: 'Libre Baskerville', serif;">20 €</h4>
+      </div>
+    </div>
+  </div>
+  <div class="col-6 col-md-3 mb-4">
+    <div class="card text-center p-3">
+      <div class="card-body">
+        <h5 class="card-title">Gambe</h5>
+        <h4 style="font-family: 'Libre Baskerville', serif;">30 €</h4>
+      </div>
+    </div>
+  </div>
+  <div class="col-6 col-md-3 mb-4">
+    <div class="card text-center p-3">
+      <div class="card-body">
+        <h5 class="card-title">Braccia</h5>
+        <h4 style="font-family: 'Libre Baskerville', serif;">15 €</h4>
+      </div>
+    </div>
+  </div>
+  <div class="col-6 col-md-3 mb-4">
+    <div class="card text-center p-3">
+      <div class="card-body">
+        <h5 class="card-title">Viso</h5>
+        <h4 style="font-family: 'Libre Baskerville', serif;">25 €</h4>
+      </div>
+    </div>
+  </div>
+  <div class="col-6 col-md-3 mb-4">
+    <div class="card text-center p-3">
+      <div class="card-body">
+        <h5 class="card-title">Addome</h5>
+        <h4 style="font-family: 'Libre Baskerville', serif;">35 €</h4>
+      </div>
+    </div>
+  </div>
+  <div class="col-6 col-md-3 mb-4">
+    <div class="card text-center p-3">
+      <div class="card-body">
+        <h5 class="card-title">Petto</h5>
+        <h4 style="font-family: 'Libre Baskerville', serif;">40 €</h4>
+      </div>
+    </div>
+  </div>
+  <div class="col-6 col-md-3 mb-4">
+    <div class="card text-center p-3">
+      <div class="card-body">
+        <h5 class="card-title">Schiena e spalle</h5>
+        <h4 style="font-family: 'Libre Baskerville', serif;">45 €</h4>
+      </div>
+    </div>
+  </div>
+  <div class="col-6 col-md-3 mb-4">
+    <div class="card text-center p-3">
+      <div class="card-body">
+        <h5 class="card-title">Total Body</h5>
+        <h4 style="font-family: 'Libre Baskerville', serif;">60 €</h4>
+      </div>
+    </div>
+  </div>
+  <div class="col-6 col-md-3 mb-4">
+    <div class="card text-center p-3">
+      <div class="card-body">
+        <h5 class="card-title">Glutei</h5>
+        <h4 style="font-family: 'Libre Baskerville', serif;">50 €</h4>
+      </div>
+    </div>
+  </div>
+  <div class="col-6 col-md-3 mb-4">
+    <div class="card text-center p-3">
+      <div class="card-body">
+        <h5 class="card-title">Mani</h5>
+        <h4 style="font-family: 'Libre Baskerville', serif;">10 €</h4>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- fine card ceretta donna-->
+
+
+<!--sezione uomo ceretta-->
+<div class="container my-5 text-center "style="max-width: 580px;">
+    <br><br>
+    <h3 style="font-family: 'Libre Baskerville', serif;color: white;">Uomo</h3>
+    <h2><span class="badge text-bg-secondary" style="font-family: 'Libre Baskerville', serif;color: white;"> Ceretta total body 80 €</span></h2>  
+  </div>
+
+  <!-- card uomo-->
+<div class="container">
+<div class="row">
+  <div class="col-6 col-md-3 mb-4">
+    <div class="card text-center p-3">
+      <div class="card-body">
+        <h5 class="card-title">Schiena</h5>
+        <h4 style="font-family: 'Libre Baskerville', serif;">20 €</h4>
+      </div>
+    </div>
+  </div>
+  <div class="col-6 col-md-3 mb-4">
+    <div class="card text-center p-3">
+      <div class="card-body">
+        <h5 class="card-title">Gambe</h5>
+        <h4 style="font-family: 'Libre Baskerville', serif;">30 €</h4>
+      </div>
+    </div>
+  </div>
+  <div class="col-6 col-md-3 mb-4">
+    <div class="card text-center p-3">
+      <div class="card-body">
+        <h5 class="card-title">Braccia</h5>
+        <h4 style="font-family: 'Libre Baskerville', serif;">15 €</h4>
+      </div>
+    </div>
+  </div>
+  <div class="col-6 col-md-3 mb-4">
+    <div class="card text-center p-3">
+      <div class="card-body">
+        <h5 class="card-title">Viso</h5>
+        <h4 style="font-family: 'Libre Baskerville', serif;">25 €</h4>
+      </div>
+    </div>
+  </div>
+  <div class="col-6 col-md-3 mb-4">
+    <div class="card text-center p-3">
+      <div class="card-body">
+        <h5 class="card-title">Addome</h5>
+        <h4 style="font-family: 'Libre Baskerville', serif;">35 €</h4>
+      </div>
+    </div>
+  </div>
+  <div class="col-6 col-md-3 mb-4">
+    <div class="card text-center p-3">
+      <div class="card-body">
+        <h5 class="card-title">Petto</h5>
+        <h4 style="font-family: 'Libre Baskerville', serif;">40 €</h4>
+      </div>
+    </div>
+  </div>
+  <div class="col-6 col-md-3 mb-4">
+    <div class="card text-center p-3">
+      <div class="card-body">
+        <h5 class="card-title">Schiena e spalle</h5>
+        <h4 style="font-family: 'Libre Baskerville', serif;">45 €</h4>
+      </div>
+    </div>
+  </div>
+  <div class="col-6 col-md-3 mb-4">
+    <div class="card text-center p-3">
+      <div class="card-body">
+        <h5 class="card-title">Total Body</h5>
+        <h4 style="font-family: 'Libre Baskerville', serif;">60 €</h4>
+      </div>
+    </div>
+  </div>
+  <div class="col-6 col-md-3 mb-4">
+    <div class="card text-center p-3">
+      <div class="card-body">
+        <h5 class="card-title">Glutei</h5>
+        <h4 style="font-family: 'Libre Baskerville', serif;">50 €</h4>
+      </div>
+    </div>
+  </div>
+  <div class="col-6 col-md-3 mb-4">
+    <div class="card text-center p-3">
+      <div class="card-body">
+        <h5 class="card-title">Mani</h5>
+        <h4 style="font-family: 'Libre Baskerville', serif;">10 €</h4>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- fine card ceretta uomo-->
+
+     <!--servizi massaggi-->
+     <div id="massaggi" class="container my-5 text-center "style="max-width: 580px;">
+        <img src="img/massaggio.jpg" class="card-img-top img-responsive" style="border-radius: 20px;" alt="massaggio">
+        <div class="card-body">
+            <br>
+            <h1 class="card-title  style=font-family: 'Libre Baskerville', serif', serif;color: white;">Massaggi e Trattamenti Corpo </h1>
+            <br><br>
+          </div>
+      </div>
+      <!-- card massaggi-->
+  <div class="container">
+    <div class="row">
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Schiena</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">20 €</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Gambe</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">30 €</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Braccia</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">15 €</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Viso</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">25 €</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Addome</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">35 €</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Petto</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">40 €</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Schiena e spalle</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">45 €</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Total Body</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">60 €</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Glutei</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">50 €</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Mani</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">10 €</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fine card massaggi-->
+
+       <!--servizi viso e trucco-->
+       <div id="viso" class="container my-5 text-center "style="max-width: 580px;">
+        <img src="img/trucco.jpg" class="card-img-top img-responsive" style="border-radius: 20px;" alt="trucco">
+        <div class="card-body">
+            <br>
+            <h1 class="card-title  style=font-family: 'Libre Baskerville', serif', serif;color: white;">Trattamenti Viso e Trucco </h1>
+            <br><br>
+          </div>
+      </div>
+
+            <!-- card viso e trucco-->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Schiena</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">20 €</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Gambe</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">30 €</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Braccia</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">15 €</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Viso</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">25 €</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Addome</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">35 €</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Petto</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">40 €</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Schiena e spalle</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">45 €</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Total Body</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">60 €</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Glutei</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">50 €</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Mani</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">10 €</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--fine card viso e trucco-->
+
+       <!--servizi manicure e pedicure-->
+       <div id="manicure" class="container my-5 text-center "style="max-width: 580px;">
+        <img src="img/manicure.jpg" class="card-img-top img-responsive" style="border-radius: 20px;" alt="manicure">
+        <div class="card-body">
+            <br>
+            <h1 class="card-title  style=font-family: 'Libre Baskerville', serif', serif;color: white;">Trattamento Mani e Piedi</h1>
+            <br><br>
+          </div>
+      </div>
+
+
+            <!-- card manicure e pedicure-->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Schiena</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">20 €</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Gambe</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">30 €</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Braccia</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">15 €</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Viso</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">25 €</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Addome</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">35 €</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Petto</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">40 €</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Schiena e spalle</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">45 €</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Total Body</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">60 €</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Glutei</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">50 €</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-4">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Mani</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">10 €</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--fine card manicure e pedicure-->
+
+       <!--servizi pressoterapia-->
+       <div id="pressoterapia" class="container my-5 text-center "style="max-width: 580px;">
+        <img src="img/pressoterapia.jpg" class="card-img-top img-responsive" style="border-radius: 20px;" alt="pressoterapia">
+        <div class="card-body">
+            <br>
+            <h1 class="card-title  style=font-family: 'Libre Baskerville', serif', serif;color: white;">Pressoterapia</h1>
+            <br><br>
+            <h2><span class="badge text-bg-secondary" style="font-family: 'Libre Baskerville', serif;color: white;">10 Sedute 100 €</span></h2>  
+
+          </div>
+      </div>
+
+      <!--card pressoterapia-->
+      <div class="container text-center">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">seduta singola 30 minuti</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">13 €</h4>
+          </div>
+        </div>
+      </div>
+   
+</div>
+
+<!--fine pressoterapia-->
+
+       <!--servizi Radiofrequenza-->
+       <div id="radiofrequenza" class="container my-5 text-center "style="max-width: 580px;">
+        <img src="img/radio.jpg" class="card-img-top img-responsive" style="border-radius: 20px;" alt="radio">
+        <div class="card-body">
+            <br>
+            <h1 class="card-title  style=font-family: 'Libre Baskerville', serif', serif;color: white;">Radiorequenza</h1>
+            <br><br>
+            <h2><span class="badge text-bg-secondary" style="font-family: 'Libre Baskerville', serif;color: white;">8 Sedute 180 €</span></h2>  
+
+          </div>
+      </div>
+
+      <!--card radiofrequenza-->
+      <div class="container text-center">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">seduta singola 30 minuti</h5>
+            <h4 style="font-family: 'Libre Baskerville', serif;">25 €</h4>
+          </div>
+        </div>
+      </div>
+   
+
+
+<!--fine pressoterapia-->
+<br><br>
+
+ <!-- Footer -->
+ <footer class="footer">
+    <div class="container text-center">
+      <div class="row">
+        <!-- Contatti -->
+        <div class="col-md-4 mb-3">
+          <h5>Contatti</h5>
+          <p>Via delle Magnolie 25<br>Selargius, 09047</p>
+          <p>Telefono: <i class="fab fa-whatsapp"></i> <a href="tel:+393452755723">345 275 5723</a></p>
+        </div>
+        
+        <!-- Orari -->
+        <div class="col-md-4 mb-3">
+          <h5>Orari</h5>
+          <p>Lunedì - Venerdì: 07:00 - 19:00<br>Sabato: 07:00 - 15:00<br>Domenica: Chiuso o su esigenze</p>
+        </div>
+
+        <!-- Social Media -->
+        <div class="col-md-4 mb-3">
+          <h5>Seguici su</h5>
+          <p>
+            <a href="https://www.instagram.com/marina.estetica_" target="_blank" class="me-3">
+              <i class="fab fa-instagram"></i> marina.estetica_
+            </a><br>
+            <a href="https://www.facebook.com/your_facebook_page" target="_blank">
+              <i class="fab fa-facebook"></i> Facebook
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="text-center py-3">
+      &copy; 2024 Marina Estetica. Tutti i diritti riservati.
+    </div>
+    <div class="text-center py-3">
+        P.I:03384420927
+      </div>
+
+  </footer>
+  <br><br>
+
+<!-- script per il tasto chiamami-->
+  <script>
+    function sendWhatsAppMessage() {
+        var nome = document.getElementById('nome').value;
+        var numero = document.getElementById('numero').value;
+        var messaggio = document.getElementById('messaggio').value;
+    
+        var url = "https://wa.me/393452755723?text=" 
+                  + "Ciao Marina, sono " + encodeURIComponent(nome) 
+                  + ". Numero di telefono: " + encodeURIComponent(numero) 
+                  + ". Messaggio: " + encodeURIComponent(messaggio);
+    
+        window.open(url, '_blank');
+    }
+    </script>
+
+
+
+
+
+
+
+
+    
+
+
+
+  
+  
+
+    
+</body>
+</html>

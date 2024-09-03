@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Libre+Baskerville&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <title>Marina Estetica</title>
+
+    <style>
+        .footer {
+      width: 100%;
+      background-color: #ffffff;
+      color: #000000;
+      padding-top: 20px;
+    }
+    .footer a {
+      color: #000000;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      color: #007bff;
+    }
+      
+      </style>
+</head>
+<body style="background: #DDC5C5;">
+            <!--inizio navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="home.html"><img src="img/logo.jpg" width="100" alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <!-- Servizi con menu a tendina -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarServizi" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Servizi
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarServizi">
+                <li><a class="dropdown-item" href="Servizi.html#laser">Laser</a></li>
+                <li><a class="dropdown-item" href="Servizi.html#ceretta">Cera</a></li>
+                <li><a class="dropdown-item" href="Servizi.html#massaggi">Massaggi</a></li>
+                <li><a class="dropdown-item" href="Servizi.html#trucco">Trucco</a></li>
+                <li><a class="dropdown-item" href="Servizi.html#manicure">Mani e Piedi</a></li>
+                <li><a class="dropdown-item" href="Servizi.html#pressoterapia">Pressoterapia</a></li>
+                <li><a class="dropdown-item" href="Servizi.html#radiofrequenza">Radiofrequenza</a></li>
+
+
+              </ul>
+            </li>
+            <!-- Contatti -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarcontatti" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contatti</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarcontatti">
+                <li><a class="dropdown-item" href="contatti.html">Chi Sono</a></li>
+              </ul>
+            </li>
+            <!-- Altri link -->
+            <li class="nav-item">
+              <a class="nav-link" href="consulenza.html">Consulenza</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">Home</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+     <!-- Tasto chiamami -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#prenotazioneModal">
+    Chiamami
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="prenotazioneModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Vorresti Essere Contattata?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <!-- Form per le prenotazioni -->
+            <form id="contactForm">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="nome" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="nome" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="numero" class="form-label">Numero di telefono</label>
+                        <input type="tel" class="form-control" id="numero" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="messaggio" class="form-label">Messaggio</label>
+                        <textarea class="form-control" id="messaggio" required></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+                    <button type="button" class="btn btn-primary" onclick="sendWhatsAppMessage()">Chiamami!</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+ </nav>
+ <br><br>
+
+<div class="text-center">
+    <h1 class="card-title">Consulenza</h1>
+    <br>
+    <br>
+
+
+</div>
+<div class="container" >
+    <div class="card mb-3" style="max-width: 1000px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="img/estetista.png" class="img-fluid rounded-start" alt="marina">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h3 class="card-title">Marina Estetica è sempre a disposizione per i suoi clienti</h3>
+              <p class="card-text">Presso Marina Estetica, crediamo che ogni persona sia unica e meriti un trattamento su misura. Per questo motivo, offriamo consulenze personalizzate per aiutarti a scegliere i trattamenti più adatti alle tue esigenze specifiche. Che tu stia cercando la soluzione ideale per la cura della pelle, il miglior metodo per affrontare i peli superflui, o il trattamento più efficace contro la cellulite, siamo qui per guidarti.
+
+                Marina, con oltre 20 anni di esperienza nel settore estetico, è costantemente aggiornata sulle ultime tecnologie e tecniche grazie alla partecipazione regolare a corsi di formazione specializzati. La sua vasta conoscenza e competenza ti garantiranno una consulenza professionale e approfondita, mirata a valorizzare al massimo la tua bellezza naturale.
+                
+                Non esitare a contattarci per una consulenza: siamo pronti ad ascoltarti e a trovare insieme la soluzione migliore per te.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+<br>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <!-- Contatti -->
+        <div class="col-md-4 mb-3">
+          <h5>Contatti</h5>
+          <p>Via delle Magnolie 25<br>Selargius, 09047</p>
+          <p>Telefono: <i class="fab fa-whatsapp"></i> <a href="tel:+393452755723">345 275 5723</a></p>
+        </div>
+        
+        <!-- Orari -->
+        <div class="col-md-4 mb-3">
+          <h5>Orari</h5>
+          <p>Lunedì - Venerdì: 07:00 - 19:00<br>Sabato: 07:00 - 15:00<br>Domenica: Chiuso o su esigenze</p>
+        </div>
+
+        <!-- Social Media -->
+        <div class="col-md-4 mb-3">
+          <h5>Seguici su</h5>
+          <p>
+            <a href="https://www.instagram.com/marina.estetica_" target="_blank" class="me-3">
+              <i class="fab fa-instagram"></i> marina.estetica_
+            </a><br>
+            <a href="https://www.facebook.com/your_facebook_page" target="_blank">
+              <i class="fab fa-facebook"></i> Facebook
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="text-center py-3">
+      &copy; 2024 Marina Estetica. Tutti i diritti riservati.
+    </div>
+    <div class="text-center py-3">
+        P.I:03384420927
+      </div>
+  </footer>
+
+  <script>
+    function sendWhatsAppMessage() {
+        var nome = document.getElementById('nome').value;
+        var numero = document.getElementById('numero').value;
+        var messaggio = document.getElementById('messaggio').value;
+    
+        var url = "https://wa.me/393452755723?text=" 
+                  + "Ciao Marina, sono " + encodeURIComponent(nome) 
+                  + ". Numero di telefono: " + encodeURIComponent(numero) 
+                  + ". Messaggio: " + encodeURIComponent(messaggio);
+    
+        window.open(url, '_blank');
+    }
+    </script>
+
+    
+</body>
+</html>
